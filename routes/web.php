@@ -20,9 +20,8 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('authors', 'AuthorController@index');
-
-//$router->post('authors', [AuthorController::class, 'store']);
-//$router->put('authors/{author}', [AuthorController::class, 'update']);
-//$router->get('authors/{author}', [AuthorController::class, 'show']);
-//$router->patch('authors/{author}', [AuthorController::class, 'update']);
-//$router->delete('authors/{author}', [AuthorController::class, 'delete']);
+$router->post('authors', 'AuthorController@store');
+$router->put('authors/{author}', 'AuthorController@update');
+$router->patch('authors/{author}', 'AuthorController@update');
+$router->get('authors/{author}', 'AuthorController@show');
+$router->delete('authors/{author}', 'AuthorController@destroy');
