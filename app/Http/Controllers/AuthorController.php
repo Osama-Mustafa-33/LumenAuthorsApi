@@ -21,8 +21,8 @@ class AuthorController extends Controller
 
     public function index()
     {
-            $authors = Author::all();
-            return $this->successResponse($authors);
+        $authors = Author::all();
+        return $this->successResponse($authors);
     }
 
     public function store(Request $request)
